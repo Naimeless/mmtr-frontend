@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: 16px;
+    background-color: grey;
+}
+        /*Шапка*/
+
+.heade{
+    height: 123px;
+    background-color: #ffffff;
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*лого шапки*/
+
+.logo{
+    font-size: 2vw;
+    margin-left: 7%;
+    flex-direction: row;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 22px;
+    color: #212121;
+    font-weight: 700;
+    align-items: center;
+}
+
+/*меню шапки*/
+
+.menu{
+    width: 54%;
+    height: 123px;
+    display: flex;
+    place-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.menu__button{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+    color: #212121;
+    font-weight: 600;
+}
+
+.menu__search-icon {
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    order: -1;
+  }
+
+/*Первый блок*/
+
+.preview-block{
+    overflow: hidden;
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-image: url('./img/1.jpg');
+    background-size: cover; */
+}
+
+.preview-block__image{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*текст в блоке*/
+
+#preview-block__title{
+    width: 100%;
+    line-height: 22px;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: 20%; */
+    position: absolute;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 5vw;
+}
+
+#preview-block__description{
+    width: 100%;
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: 27%; */
+    position: absolute;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 2vw;
+    line-height: 22px;
+}
+
+/*Кнопки первого блока*/
+
+/*1*/
+
+.preview-block__btn_green{
+    margin-left: 53%;
+    /* margin-top: 40%; */
+    place-content: center;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #00897b;
+    color: #fff;
+    border: 0;
+    font-size: 2vw;
+    text-transform: uppercase;
+    padding: 2%;
+    cursor: pointer;
+    border: 3px solid #00897b;
+}
+
+
+/*навод на кнопку*/
+.preview-block__btn_green:hover{
+    background: rgb(160, 209, 203);
+    border: 3px solid rgb(160, 209, 203);
+}
+
+/*2*/
+
+.preview-block__btn_white{
+    margin-left: 23%;
+    /* margin-top: 40%; */
+    place-content: center;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    font-size: 2vw;
+    text-transform: uppercase;
+    padding: 2%;
+    cursor: pointer;
+}
+
+h1{
+    font-weight: lighter;
+    font-size: 3.3em;
+    word-wrap: break-word;
+    line-height: 55px;
+}
+
+p{
+    font-size: 21px;
+    line-height: 40px;
+}
+
+p.Italic{
+    color: #ccc;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 25px;
+    margin: 15px 0;
+}
+
+/*размер кнопок в зависимости от разрешения экрана*/
+
+/*
+@media screen and (max-width: 730px){
+    .block__call-to-action-btn{
+        padding: 10px 20px;
+    }
+
+    .block__call-to-action-btnn{
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .block__call-to-action-btn{
+        padding: 5px 10px;
+    }
+
+    .block__call-to-action-btnn{
+        padding: 5px 10px;
+    }
+}
+*/
+
+/*Блок 2*/
+.blockk{
+    height: 400px;
+    background-color: white;
+    overflow: hidden;
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#blockk_about{
+
+    width: 100%;
+    line-height: 22px;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 11%;
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    font-family: "Open Sans";
+    font-size: 2.5vw;
+}
+
+#blockk_lorem{
+
+    width: 100%;
+    line-height: 2vw;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 18%;
+    position: absolute;
+    color: black;
+    font-family: "Open Sans";
+    font-size: 1.5vw;
+}
+
+.blockk__icon{
+    margin-top: 32%;
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    overflow: hidden;
+    place-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
