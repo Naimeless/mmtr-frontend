@@ -1,0 +1,114 @@
+$font-stack: "Open Sans", sans-serif;
+$primary-color: #212121;
+$back: #ffffff;
+$i: flex;
+$a: space-between;
+$b: space-around;
+$c: center;
+$gr: #00897b;
+
+body{
+    font: 16px $font-stack;
+    overflow-x: hidden;
+    overflow: scroll;
+}
+
+.head{
+    height: 123px;
+    background-color: $back;
+    display: $i;
+    flex-direction: $a;
+}
+
+.logo{
+    font-size: 2vw;
+    display: $i;
+    line-height: 22px;
+    color: $primary-color;
+    font-weight: 700;
+}
+
+.menu{
+    width: 54%;
+    height: 123px;
+    display: $i;
+    place-content: $c;
+    justify-content: $b;
+    cursor: pointer;
+
+    &__button{
+        display: $i;
+        justify-content: flex-end;
+        font-size: 1.5vw;
+        letter-spacing: 1px;
+        color: $primary-color;
+        font-weight: 600;
+    }
+
+    &__search-icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        order: -1;
+    }
+}
+
+.preview-block{
+    display: $i;
+    place-content: $c;
+    justify-content: $a;
+
+    &__image{
+        position: relative;
+        width: 100%;
+        place-content: $c;
+        display: $i;
+        justify-content: $c;
+    }
+
+    &__title{
+        width: 100%;
+        line-height: 22px;
+        display: $i;
+        justify-content: $c;
+        color: $back;
+        font-size: 5vw;
+    }
+
+    &__description{
+       width: 100%;
+       place-content: $c;
+       display: $i;
+       justify-content: $c;
+       color: $back;
+       font-size: 2vw;
+       line-height: 22px; 
+    }
+
+    &__btn_green{
+        margin-left: 53%;
+        place-content: $c;
+        display: $i;
+        justify-content: $c;
+        background: $gr;
+        color: $back;
+        font-size: 2vw;
+        text-transform: uppercase;
+        padding: 2%;
+        cursor: pointer;
+        border: 3px solid $gr;
+
+        &__&:hover{
+            background: rgb(160, 209, 203);
+            border: 3px solid rgb(160, 209, 203);
+        }
+    }
+
+    &__btn_white{
+        margin-left: 23%;
+        place-content: $c;
+        display: $i;
+        justify-content: $c;
+        background: transparent;
+    }
+}

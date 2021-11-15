@@ -12,9 +12,16 @@ body{
     font-size: 16px;
     background-color: grey;
 }
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
         /*Шапка*/
 
-.heade{
+.head{
     height: 123px;
     background-color: #ffffff;
     place-content: center;
@@ -72,13 +79,25 @@ body{
 /*Первый блок*/
 
 .preview-block{
-    overflow: hidden;
-    place-content: center;
+    /*overflow: hidden;*/
+    /*place-content: center;*/
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    /* background-image: url('./img/1.jpg');
-    background-size: cover; */
+    /*justify-content: space-between;*/
+    background-image: url('../img/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.preview-block__col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .preview-block__image{
@@ -95,99 +114,85 @@ body{
 
 #preview-block__title{
     width: 100%;
-    line-height: 22px;
+    /*line-height: 22px;*/
     align-content: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* margin-top: 20%; */
-    position: absolute;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: center;*/
+    /*!* margin-top: 20%; *!*/
+    /*position: absolute;*/
     color: white;
     font-family: "Open Sans";
     font-size: 5vw;
+    text-align: center;
 }
 
 #preview-block__description{
     width: 100%;
-    place-content: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    /*place-content: center;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: center;*/
     /* margin-top: 27%; */
-    position: absolute;
+    /*position: absolute;*/
     color: white;
     font-family: "Open Sans";
     font-size: 2vw;
-    line-height: 22px;
+    text-align: center;
+    /*line-height: 22px;*/
 }
 
 /*Кнопки первого блока*/
 
 /*1*/
 
-.preview-block__btn_green{
-    margin-left: 53%;
-    /* margin-top: 40%; */
-    place-content: center;
-    position: absolute;
+.preview-block-buttons{
     display: flex;
-    flex-direction: row;
     justify-content: center;
+}
+
+.preview-block-buttons__btn_green{
     background: #00897b;
     color: #fff;
-    border: 0;
     font-size: 2vw;
     text-transform: uppercase;
-    padding: 2%;
+    padding: 30px 40px;
     cursor: pointer;
     border: 3px solid #00897b;
+    margin: 20px;
 }
 
 
 /*навод на кнопку*/
-.preview-block__btn_green:hover{
+.preview-block-buttons__btn_green:hover{
     background: rgb(160, 209, 203);
     border: 3px solid rgb(160, 209, 203);
 }
 
 /*2*/
 
-.preview-block__btn_white{
-    margin-left: 23%;
-    /* margin-top: 40%; */
-    place-content: center;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.preview-block-buttons__btn_white{
     background: transparent;
     color: #fff;
     border: 0;
     font-size: 2vw;
     text-transform: uppercase;
-    padding: 2%;
+    padding: 30px 40px;
     cursor: pointer;
+    margin: 20px;
 }
 
-h1{
-    font-weight: lighter;
-    font-size: 3.3em;
-    word-wrap: break-word;
-    line-height: 55px;
-}
+/*h1{*/
+/*    font-weight: lighter;*/
+/*    font-size: 3.3em;*/
+/*    word-wrap: break-word;*/
+/*    line-height: 55px;*/
+/*}*/
 
-p{
-    font-size: 21px;
-    line-height: 40px;
-}
-
-p.Italic{
-    color: #ccc;
-    font-style: italic;
-    font-size: 19px;
-    line-height: 25px;
-    margin: 15px 0;
-}
+/*p{*/
+/*    font-size: 21px;*/
+/*    line-height: 40px;*/
+/*}*/
 
 /*размер кнопок в зависимости от разрешения экрана*/
 
@@ -268,8 +273,7 @@ p.Italic{
     justify-content: center;
 }
 
-.col{
+
+.d_flex{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
