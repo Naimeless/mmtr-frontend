@@ -1,48 +1,66 @@
 $font-stack: "Open Sans", sans-serif;
-$primary-color: #212121;
-$back: #ffffff;
-$i: flex;
-$a: space-between;
-$b: space-around;
-$c: center;
-$gr: #00897b;
+$s-b: space-between;
+$s-a: space-around;
+$x-color-black: #212121;
+$x-color-green: #00897b;
+$x-color-white: #ffffff;
+
+$palette-primary: $x-color-black;
+$palette-secondary: $x-color-green;
+$palette-trending: $x-color-white;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
-    font: 16px $font-stack;
     overflow-x: hidden;
+    font-size: 16px;
     overflow: scroll;
+
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .head{
-    height: 123px;
-    background-color: $back;
-    display: $i;
-    flex-direction: $a;
+    background-color: $palette-trending;
+    display: flex;
+    justify-content: $s-b;
+    padding: 40px 60px;
 }
 
 .logo{
     font-size: 2vw;
-    display: $i;
+    display: flex;
+    font-family: $font-stack;
     line-height: 22px;
-    color: $primary-color;
+    color: $palette-primary;
     font-weight: 700;
+    align-items: center;
 }
 
 .menu{
-    width: 54%;
-    height: 123px;
-    display: $i;
-    place-content: $c;
-    justify-content: $b;
+    display: flex;
+    justify-content: $s-b;
     cursor: pointer;
 
     &__button{
-        display: $i;
+        display: flex;
         justify-content: flex-end;
+        align-items: center;
+        font-family: $font-stack;
         font-size: 1.5vw;
         letter-spacing: 1px;
-        color: $primary-color;
+        color: $palette-primary;
         font-weight: 600;
+        margin-left: 25px;
     }
 
     &__search-icon{
@@ -54,61 +72,78 @@ body{
 }
 
 .preview-block{
-    display: $i;
-    place-content: $c;
-    justify-content: $a;
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+    background-image: url('../img/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 
     &__image{
         position: relative;
         width: 100%;
-        place-content: $c;
-        display: $i;
-        justify-content: $c;
+        place-content: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
     }
 
     &__title{
         width: 100%;
-        line-height: 22px;
-        display: $i;
-        justify-content: $c;
-        color: $back;
+        align-content: center;
+        color: $palette-trending;
+        font-family: $font-stack;
         font-size: 5vw;
+        text-align: center;
     }
 
     &__description{
        width: 100%;
-       place-content: $c;
-       display: $i;
-       justify-content: $c;
-       color: $back;
+       color: $palette-trending;
+       font-family: $font-stack;
        font-size: 2vw;
-       line-height: 22px; 
+       text-align: center;
     }
 
-    &__btn_green{
-        margin-left: 53%;
-        place-content: $c;
-        display: $i;
-        justify-content: $c;
-        background: $gr;
-        color: $back;
-        font-size: 2vw;
-        text-transform: uppercase;
-        padding: 2%;
-        cursor: pointer;
-        border: 3px solid $gr;
+    &-buttons{
+        display: flex;
+        justify-content: center;
 
-        &__&:hover{
-            background: rgb(160, 209, 203);
-            border: 3px solid rgb(160, 209, 203);
+        &__btn_green{
+            background: $palette-secondary;
+            color: $palette-trending;
+            font-size: 2vw;
+            text-transform: uppercase;
+            padding: 30px 40px;
+            cursor: pointer;
+            border: 3px solid $palette-secondary;
+            margin: 20px;
+
+            &:hover{
+                background: rgb(160, 209, 203);
+                border: 3px solid rgb(160, 209, 203);
+            }
+        }
+
+        &__btn_white{
+            background: transparent;
+            color: $palette-trending;
+            font-size: 2vw;
+            text-transform: uppercase;
+            padding: 30px 20px;
+            cursor: pointer;
+            margin: 20px;
         }
     }
 
-    &__btn_white{
-        margin-left: 23%;
-        place-content: $c;
-        display: $i;
-        justify-content: $c;
-        background: transparent;
-    }
 }
