@@ -108,4 +108,67 @@ html, body {
       cursor: pointer;
       margin: 20px; }
 
+
+      /*Блок 2*/
+.description-block{
+  height: 400px;
+  background-color: white;
+  overflow: hidden;
+  place-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description-block_heading{
+
+  width: 100%;
+  line-height: 22px;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 11%;
+  position: absolute;
+  color: black;
+  font-weight: bold;
+  font-family: "Open Sans";
+  font-size: 2.5vw;
+}
+
+.description-block_text{
+
+  width: 100%;
+  line-height: 2vw;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 18%;
+  position: absolute;
+  color: black;
+  font-family: "Open Sans";
+  font-size: 1.5vw;
+}
+
+.description-block_image{
+  display: flex;
+}
+
+.description-block__icon{
+  position: relative;
+  width: 4vw;
+  height: 4vw;
+  place-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.d_flex{
+  display: flex;
+}
+
 /*# sourceMappingURL=codes.css.map */
