@@ -147,3 +147,46 @@ html, body{
     }
 
 }
+
+/*блок 2*/
+
+.description-block{
+    display: flex;
+
+    &_heading{
+        line-height: 22px;
+        display: flex;
+        justify-content: center;
+        margin-top: 11%;
+        color: $palette-primary;
+        font-weight: bold;
+        font-family: $font-stack;
+        font-size: 2.5vw;
+    }
+
+    &_text{
+        line-height: 2vw;
+        align-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3%;
+        color: black;
+        font-family: $font-stack;
+        font-size: 1.5vw;
+    }
+  
+    &_image{
+        background-color: $palette-trending;
+        display: flex;
+        justify-content: $s-a;
+        padding: 40px 60px;
+    }
+  
+    &__icon{
+        width: 6vw;
+        height: 6vw;
+        display: flex;
+    }
+}

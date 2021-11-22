@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,12 +18,14 @@ html, body {
 
 .head {
   background-color: #ffffff;
+  place-content: center;
   display: flex;
-  justify-content: space-between;
-  padding: 40px 60px; }
+  justify-content: space-between; }
 
 .logo {
+  width: 37%;
   font-size: 2vw;
+  margin-left: 7%;
   display: flex;
   font-family: "Open Sans", sans-serif;
   line-height: 22px;
@@ -30,8 +34,11 @@ html, body {
   align-items: center; }
 
 .menu {
+  width: 54%;
+  height: 123px;
   display: flex;
-  justify-content: space-between;
+  place-content: center;
+  justify-content: space-around;
   cursor: pointer; }
   .menu__button {
     display: flex;
@@ -41,8 +48,7 @@ html, body {
     font-size: 1.5vw;
     letter-spacing: 1px;
     color: #212121;
-    font-weight: 600;
-    margin-left: 20px; }
+    font-weight: 600; }
   .menu__search-icon {
     width: 20px;
     height: 20px;
@@ -97,8 +103,8 @@ html, body {
       border: 3px solid #00897b;
       margin: 20px; }
       .preview-block-buttons__btn_green:hover {
-        background: #a0d1cb;
-        border: 3px solid #a0d1cb; }
+        background: #3cbdb0;
+        border: 3px solid #3cbdb0; }
     .preview-block-buttons__btn_white {
       background: transparent;
       color: #ffffff;
@@ -108,67 +114,58 @@ html, body {
       cursor: pointer;
       margin: 20px; }
 
-
-      /*Блок 2*/
-.description-block{
-  height: 400px;
-  background-color: white;
-  overflow: hidden;
-  place-content: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.description-block_heading{
-
-  width: 100%;
+/*Второй блок*/
+.description-block_heading {
   line-height: 22px;
-  align-content: center;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin-top: 11%;
-  position: absolute;
-  color: black;
+  color: #212121;
   font-weight: bold;
   font-family: "Open Sans";
-  font-size: 2.5vw;
-}
+  font-size: 30px; }
 
-.description-block_text{
-
-  width: 100%;
+.description-block_text {
   line-height: 2vw;
   align-content: center;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 18%;
-  position: absolute;
-  color: black;
+  margin-top: 3%;
+  color: #212121;
   font-family: "Open Sans";
-  font-size: 1.5vw;
-}
+  font-size: 1.5vw; }
 
-.description-block_image{
+.description-block_image {
+  background-color: #ffffff;
   display: flex;
-}
+  justify-content: space-around;
+  padding: 40px 60px;
+  margin-top: 8%; }
 
-.description-block__icon{
+.description-block__icon {
   position: relative;
-  width: 4vw;
-  height: 4vw;
   place-content: center;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-around; }
+
+.description-block_title-icon{
+  display: flex;
+  font-family: "Open Sans";
+  justify-content: space-around;
+  font-size: 13px;
+  padding: 5px 47px;
 }
 
-
-.d_flex{
+.description-block_text-icon{
   display: flex;
+  text-align: center;
+  font-family: "Open Sans";
+  justify-content: space-evenly;
+  font-size: 15px;
+  margin-top: 2%;
+  padding: 1px 4px;
 }
 
 /*# sourceMappingURL=codes.css.map */

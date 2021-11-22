@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Naimeless/mmtr-frontend#readme",
   "dependencies": {
+    "install": "^0.13.0",
     "sass": "^1.43.4"
   }
 }
