@@ -1,6 +1,7 @@
 $font-stack: "Open Sans", sans-serif;
 $s-b: space-between;
 $s-a: space-around;
+$s-e: space-evenly;
 $x-color-black: #212121;
 $x-color-green: #00897b;
 $x-color-white: #ffffff;
@@ -150,43 +151,71 @@ html, body{
 
 /*блок 2*/
 
-.description-block{
+.description-block {
+    width: 100%;
     display: flex;
+    justify-content: $s-a;
+    padding: 40px 20px;
+    flex-direction: column; 
 
     &_heading{
-        line-height: 22px;
-        display: flex;
-        justify-content: center;
-        margin-top: 11%;
-        color: $palette-primary;
-        font-weight: bold;
-        font-family: $font-stack;
-        font-size: 2.5vw;
+      line-height: 22px;
+      display: flex;
+      justify-content: center;
+      margin-top: 11%;
+      color: #212121;
+      font-weight: bold;
+      font-family: $font-stack;
+      font-size: 2.5vw; 
     }
 
-    &_text{
-        line-height: 2vw;
-        align-content: center;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 3%;
-        color: black;
-        font-family: $font-stack;
-        font-size: 1.5vw;
+    &_text {
+      line-height: 2vw;
+      align-content: center;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 3%;
+      color: #212121;
+      font-family: $font-stack;
+      font-size: 1.5vw; 
     }
-  
-    &_image{
-        background-color: $palette-trending;
-        display: flex;
-        justify-content: $s-a;
-        padding: 40px 60px;
+
+    &_title-text {
+      display: flex;
+      justify-content: $s-e;
+      padding: 100px 0px;
+      text-align: center; 
     }
-  
-    &__icon{
-        width: 6vw;
-        height: 6vw;
-        display: flex;
+
+    &__one, &__two, &__three {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; 
+    }
+
+    &_icon {
+      display: flex;
+      position: inherit;
+      margin: auto;
+      width: 5vw;
+      height: 5vw; 
+    }
+
+    &_title-text-heading {
+      display: flex;
+      justify-content: $s-e;
+      padding-top: 15%;
+      font-family: $font-stack;
+      font-size: 1.8vw; 
+    }
+
+    &_title-text-text {
+      display: flex;
+      justify-content: $s-e;
+      font-family: $font-stack;
+      font-size: 1.5vw;
+      margin-top: 10%; 
     }
 }
