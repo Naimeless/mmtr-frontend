@@ -1,6 +1,7 @@
 $font-stack: "Open Sans", sans-serif;
 $s-b: space-between;
 $s-a: space-around;
+$s-e: space-evenly;
 $x-color-black: #212121;
 $x-color-green: #00897b;
 $x-color-white: #ffffff;
@@ -28,6 +29,8 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
+/*шапкаы*/
 
 .head{
     background-color: $palette-trending;
@@ -70,6 +73,8 @@ html, body{
         order: -1;
     }
 }
+
+/*первый блок*/
 
 .preview-block{
     display: flex;
@@ -145,5 +150,162 @@ html, body{
             margin: 20px;
         }
     }
+}
 
+/*второй блок*/
+
+.description-block{
+    width: 100%;
+    display: flex;
+    justify-content: $s-a;
+    padding: 40px 20px;
+    flex-direction: column;
+
+    &_heading{
+        line-height: 22px;
+        display: flex;
+        justify-content: center;
+        margin-top: 11%;
+        color: $palette-primary;
+        font-weight: bold;
+        font-family: $font-stack;
+        font-size: 2.5vw;
+    }
+
+    &_text{
+        line-height: 2vw;
+        align-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3%;
+        color: $palette-primary;
+        font-family: $font-stack;
+        font-size: 1.5vw;
+    }
+  
+    &_information{
+        display: flex;
+        justify-content: $s-e;
+        padding: 100px 0px;
+        text-align: center;
+    }
+  
+    &__content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &_icon{
+        display: flex;
+        margin: auto;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    &_information-heading{
+        display: flex;
+        justify-content: $s-e;
+        padding-top: 15%;
+        font-family: $font-stack;
+        font-size: 1.8vw;
+    }
+
+    &_information-text{
+        display: flex;
+        justify-content: $s-e;
+        font-family: $font-stack;
+        font-size: 1.5vw;
+        margin-top: 10%;
+    }
+}
+
+
+
+/*третий блок*/
+.services-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e4fdf9;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+  
+    &_title{
+        padding-bottom: 80px;
+  
+        &_heading {
+            line-height: 22px;
+            display: flex;
+            justify-content: center;
+            margin-top: 11%;
+            color: #212121;
+            font-weight: bold;
+            font-family: "Open Sans", sans-serif;
+            font-size: 2.5vw;
+        }
+        &_text {
+            line-height: 2vw;
+            align-content: center;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 3%;
+            color: #212121;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.4vw;
+        }
+    }
+
+  &_service {
+    display: flex;
+    flex-direction: column;
+
+    &_read-more {
+        justify-content: space-around;
+        display: flex;
+
+        &_info {
+            font-size: 13px;
+            margin: 20px 20px 20px;
+            padding: 30px 30px 0px;
+            background-color: #ffffff;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+
+                &_text{
+                    margin-top: 25px;
+                }
+        }
+        &_info:hover{
+            background: #00897b;
+            color: #ffffff;
+            box-shadow: 5px 10px 10px rgba(0,0,0,0.5);
+          }
+    }
+    
+    &_icon{
+        display: flex;
+        width: 5vw;
+        height: 5vw;
+        margin: auto;
+    }
+  }
+  
+  &_btn{
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    padding: 20px;
+    cursor: pointer;
+    border: 3px solid #000000;
+    margin: 46px;
+  }
 }
