@@ -301,15 +301,18 @@ html, body{
                 border: 3px solid $palette-primary;
                 margin: 46px;
               }
-            &-btn:hover{
-                color: $palette-trending;
-                border: 3px solid $palette-trending;
-            }
         }
         &-info:hover{
             background: $palette-secondary;
             color: $palette-trending;
             box-shadow: 5px 10px 10px $palette-primary;
+            & .services-block__content-info-icon{
+                filter: invert(1);
+            }
+
+            & .services-block__content-info-btn{
+                filter: invert(1);
+            }
           }
     }
 }

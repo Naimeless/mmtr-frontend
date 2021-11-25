@@ -263,14 +263,16 @@ html, body {
   border: 3px solid #212121;
   margin: 46px;
 }
-.services-block__content-info-btn:hover {
-  color: #ffffff;
-  border: 3px solid #ffffff;
-}
 .services-block__content-info:hover {
   background: #00897b;
   color: #ffffff;
   box-shadow: 5px 10px 10px #212121;
+}
+.services-block__content-info:hover .services-block__content-info-icon {
+  filter: invert(1);
+}
+.services-block__content-info:hover .services-block__content-info-btn {
+  filter: invert(1);
 }
 
 /*# sourceMappingURL=codes.css.map */
