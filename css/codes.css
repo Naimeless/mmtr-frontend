@@ -16,6 +16,7 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /*шапкаы*/
@@ -131,16 +132,15 @@ html, body {
 /*второй блок*/
 .description-block {
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
-  padding: 40px 20px;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 .description-block_heading {
   line-height: 22px;
   display: flex;
   justify-content: center;
-  margin-top: 11%;
   color: #212121;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
@@ -161,7 +161,6 @@ html, body {
 .description-block_information {
   display: flex;
   justify-content: space-evenly;
-  padding: 100px 0px;
   text-align: center;
 }
 .description-block__content {
@@ -199,10 +198,10 @@ html, body {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
 }
-.services-block_title {
+.services-block__title {
   padding-bottom: 80px;
 }
-.services-block_title_heading {
+.services-block__title-heading {
   line-height: 22px;
   display: flex;
   justify-content: center;
@@ -210,9 +209,9 @@ html, body {
   color: #212121;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
-  font-size: 2.5vw;
+  font-size: 35px;
 }
-.services-block_title_text {
+.services-block__title-text {
   line-height: 2vw;
   align-content: center;
   text-align: center;
@@ -222,18 +221,20 @@ html, body {
   margin-top: 3%;
   color: #212121;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4vw;
+  font-size: 20px;
 }
-.services-block_service {
+.services-block__content {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
-.services-block_service_read-more {
+.services-block__content-row {
   justify-content: space-around;
   display: flex;
 }
-.services-block_service_read-more_info {
-  font-size: 13px;
+.services-block__content-info {
+  width: 400px;
+  font-size: 16px;
   margin: 20px 20px 20px;
   padding: 30px 30px 0px;
   background-color: #ffffff;
@@ -242,30 +243,34 @@ html, body {
   justify-content: space-evenly;
   text-align: center;
 }
-.services-block_service_read-more_info_text {
+.services-block__content-info-text {
   margin-top: 25px;
 }
-.services-block_service_read-more_info:hover {
-  background: #00897b;
-  color: #ffffff;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-}
-.services-block_service_icon {
+.services-block__content-info-icon {
   display: flex;
   width: 5vw;
   height: 5vw;
   margin: auto;
 }
-.services-block_btn {
+.services-block__content-info-btn {
   display: flex;
   justify-content: center;
   background: transparent;
-  font-size: 1.5vw;
+  font-size: 20px;
   text-transform: uppercase;
   padding: 20px;
   cursor: pointer;
-  border: 3px solid #000000;
+  border: 3px solid #212121;
   margin: 46px;
+}
+.services-block__content-info-btn:hover {
+  color: #ffffff;
+  border: 3px solid #ffffff;
+}
+.services-block__content-info:hover {
+  background: #00897b;
+  color: #ffffff;
+  box-shadow: 5px 10px 10px #212121;
 }
 
 /*# sourceMappingURL=codes.css.map */

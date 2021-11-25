@@ -28,6 +28,7 @@ html, body{
     margin: 0;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /*шапкаы*/
@@ -156,16 +157,15 @@ html, body{
 
 .description-block{
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: $s-a;
-    padding: 40px 20px;
+    justify-content: $s-e;
     flex-direction: column;
 
     &_heading{
         line-height: 22px;
         display: flex;
         justify-content: center;
-        margin-top: 11%;
         color: $palette-primary;
         font-weight: bold;
         font-family: $font-stack;
@@ -188,7 +188,6 @@ html, body{
     &_information{
         display: flex;
         justify-content: $s-e;
-        padding: 100px 0px;
         text-align: center;
     }
   
@@ -233,10 +232,10 @@ html, body{
     flex-direction: column;
     font-family: "Open Sans", sans-serif;
   
-    &_title{
+    &__title{
         padding-bottom: 80px;
   
-        &_heading {
+        &-heading {
             line-height: 22px;
             display: flex;
             justify-content: center;
@@ -244,9 +243,9 @@ html, body{
             color: #212121;
             font-weight: bold;
             font-family: "Open Sans", sans-serif;
-            font-size: 2.5vw;
+            font-size: 35px;
         }
-        &_text {
+        &-text {
             line-height: 2vw;
             align-content: center;
             text-align: center;
@@ -256,56 +255,61 @@ html, body{
             margin-top: 3%;
             color: #212121;
             font-family: "Open Sans", sans-serif;
-            font-size: 1.4vw;
+            font-size: 20px;
         }
     }
 
-  &_service {
+  &__content {
     display: flex;
     flex-direction: column;
+    padding: 20px;
 
-    &_read-more {
+    &-row {
         justify-content: space-around;
         display: flex;
+    }
+    &-info {
+        width: 400px;
+        font-size: 16px;
+        margin: 20px 20px 20px;
+        padding: 30px 30px 0px;
+        background-color: $palette-trending;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
 
-        &_info {
-            font-size: 13px;
-            margin: 20px 20px 20px;
-            padding: 30px 30px 0px;
-            background-color: #ffffff;
-            flex-direction: column;
-            display: flex;
-            justify-content: space-evenly;
-            text-align: center;
+            &-text{
+                margin-top: 25px;
+            }
 
-                &_text{
-                    margin-top: 25px;
-                }
+            &-icon{
+                display: flex;
+                width: 5vw;
+                height: 5vw;
+                margin: auto;
+            }
+
+            &-btn{
+                display: flex;
+                justify-content: center;
+                background: transparent;
+                font-size: 20px;
+                text-transform: uppercase;
+                padding: 20px;
+                cursor: pointer;
+                border: 3px solid $palette-primary;
+                margin: 46px;
+              }
+            &-btn:hover{
+                color: $palette-trending;
+                border: 3px solid $palette-trending;
+            }
         }
-        &_info:hover{
-            background: #00897b;
-            color: #ffffff;
-            box-shadow: 5px 10px 10px rgba(0,0,0,0.5);
+        &-info:hover{
+            background: $palette-secondary;
+            color: $palette-trending;
+            box-shadow: 5px 10px 10px $palette-primary;
           }
     }
-    
-    &_icon{
-        display: flex;
-        width: 5vw;
-        height: 5vw;
-        margin: auto;
-    }
-  }
-  
-  &_btn{
-    display: flex;
-    justify-content: center;
-    background: transparent;
-    font-size: 1.5vw;
-    text-transform: uppercase;
-    padding: 20px;
-    cursor: pointer;
-    border: 3px solid #000000;
-    margin: 46px;
-  }
 }
