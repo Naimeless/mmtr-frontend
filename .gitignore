@@ -1,3 +1,5 @@
 /node_modules
 .sass-cache/ce590d326446f731bc49ef18ee1af283b26192f1/codes.scssc
 css/codes.css.map
+package-lock.json
+package.json

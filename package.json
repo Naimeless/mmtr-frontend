@@ -1,7 +1,6 @@
 {
-  "name": "codes",
+  "name": "gulp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +16,12 @@
   },
   "homepage": "https://github.com/Naimeless/mmtr-frontend#readme",
   "dependencies": {
+    "gulp-sass": "^5.0.0",
     "sass": "^1.43.4"
+  },
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2"
   }
 }
