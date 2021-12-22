@@ -259,65 +259,65 @@ html, body{
         }
     }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 20px;
 
-    &-row {
-        justify-content: space-around;
-        display: flex;
-    }
-    &-info {
-        width: 400px;
-        font-size: 20px;
-        margin: 20px 20px 20px;
-        padding: 30px 30px 0px;
-        background-color: $palette-trending;
-        flex-direction: column;
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
+//     &-row {
+//         justify-content: space-around;
+//         display: flex;
+//     }
+//     &-info {
+//         width: 400px;
+//         font-size: 20px;
+//         margin: 20px 20px 20px;
+//         padding: 30px 30px 0px;
+//         background-color: $palette-trending;
+//         flex-direction: column;
+//         display: flex;
+//         justify-content: space-evenly;
+//         text-align: center;
 
-            &-text{
-                margin-top: 25px;
-            }
+//             &-text{
+//                 margin-top: 25px;
+//             }
 
-            &-icon{
-                display: flex;
-                width: 5vw;
-                height: 5vw;
-                margin: auto;
-            }
+//             &-icon{
+//                 display: flex;
+//                 width: 5vw;
+//                 height: 5vw;
+//                 margin: auto;
+//             }
 
-            &-btn{
-                display: flex;
-                justify-content: center;
-                background: transparent;
-                font-size: 20px;
-                text-transform: uppercase;
-                padding: 20px;
-                cursor: pointer;
-                border: 3px solid $palette-primary;
-                margin: 46px;
-              }
+//             &-btn{
+//                 display: flex;
+//                 justify-content: center;
+//                 background: transparent;
+//                 font-size: 20px;
+//                 text-transform: uppercase;
+//                 padding: 20px;
+//                 cursor: pointer;
+//                 border: 3px solid $palette-primary;
+//                 margin: 46px;
+//               }
 
-            &:hover{
-                background: $palette-secondary;
-                color: $palette-trending;
-                box-shadow: 5px 10px 10px $palette-primary;
+//             &:hover{
+//                 background: $palette-secondary;
+//                 color: $palette-trending;
+//                 box-shadow: 5px 10px 10px $palette-primary;
 
-            }
+//             }
 
-            &:hover &-icon{
-                filter: invert(1);
-            }
+//             &:hover &-icon{
+//                 filter: invert(1);
+//             }
 
-            &:hover &-btn{
-                filter: invert(1);
-            }
-        }
-    }
+//             &:hover &-btn{
+//                 filter: invert(1);
+//             }
+//         }
+//     }
 }
 
 /*четвёртый блок*/
