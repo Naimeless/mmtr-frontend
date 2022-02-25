@@ -1,7 +1,7 @@
 let contactFormLink = document.getElementById('contact-form-link');
 
 let contactBlockForm = document.getElementById('contact-block-form');
-let contactBlockButton = document.getElementById('contact-block__send');
+let contactBlockButton = document.getElementById('contactBlockSend');
 
 contactFormLink.onclick = function link() {
     document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'});
@@ -77,11 +77,12 @@ function createElement(title, description){
 
 //блок-форма
 
-function Input(type, value, placeholder, classList) {
+function Input(type, value, placeholder, classList, id) {
   this.type = type;
   this.value = value;
   this.placeholder = placeholder;
   this.classList = classList;
+  this.id = id;
 };
 
 Input.prototype.create = function () {
@@ -90,39 +91,58 @@ Input.prototype.create = function () {
   input.value = this.value;
   input.placeholder = this.placeholder;
   input.classList = this.classList;
+  input.id = this.id;
   contactBlockForm.appendChild(input);
 };
 
-const input1 = new Input("text",  "", "Your NAME", "contact-block__form-user");
+const input1 = new Input("text",  "", "Your NAME", "contact-block__form-user", "name");
 input1.create();
 
-const input2 = new Input("email", "", "Your Email", "contact-block__form-user");
+const input2 = new Input("email", "", "Your Email", "contact-block__form-user", "mail");
 input2.create();
 
-const textarea = new Input("text", "", "Write message", "contact-block__questions-user");
+const textarea = new Input("text", "", "Write message", "contact-block__questions-user", "message");
 textarea.create();
 
 //валидация
 
+const users = [];
+
 contactBlockButton.addEventListener('click', function (event) {
-  event.preventDefault()
+  event.preventDefault();
 
   let elems = contactBlockForm.children;
-
   for (let contactBlockForm of elems){
     if(contactBlockForm.className !== 'contact-block__send' ){
+
+      let isValidationPassed = true;
+
       if(contactBlockForm.value === ''){
         contactBlockForm.style.border = '1px solid red'
+        isValidationPassed = false;
       }
       else{
-        contactBlockForm.style.border = 'none'
-      }
+        contactBlockForm.style.border = 'none';
+
+        const name = document.body.querySelector("#name").value;
+        const mail = document.body.querySelector('#mail').value;
+        const message = document.body.querySelector('#message').value;
+
+        let user = {
+          name,
+          mail,
+          message
+        };
+        
+        if (isValidationPassed === true){
+            let user1 = users.push(user);
+        } 
+      }      
     }
+    localStorage.setItem('user', JSON.stringify(users)); 
   }
 });
 
-//localStorage
 
 
 
-debugger;
