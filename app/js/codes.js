@@ -111,36 +111,39 @@ const users = [];
 contactBlockButton.addEventListener('click', function (event) {
   event.preventDefault();
 
+  let user;
+  let isValidationPassed;
+
   let elems = contactBlockForm.children;
   for (let contactBlockForm of elems){
-    if(contactBlockForm.className !== 'contact-block__send' ){
-
-      let isValidationPassed = true;
+    if(contactBlockForm.className !== 'contact-block__send'){
 
       if(contactBlockForm.value === ''){
         contactBlockForm.style.border = '1px solid red'
         isValidationPassed = false;
       }
+      
       else{
         contactBlockForm.style.border = 'none';
+        isValidationPassed = true;
 
-        const name = document.body.querySelector("#name").value;
-        const mail = document.body.querySelector('#mail').value;
-        const message = document.body.querySelector('#message').value;
-
-        let user = {
-          name,
+        let names = document.body.querySelector("#name").value;
+        let mail = document.body.querySelector('#mail').value;
+        let message = document.body.querySelector('#message').value;
+        
+        user = {
+          names,
           mail,
           message
         };
-        
-        if (isValidationPassed === true){
-            let user1 = users.push(user);
-        } 
       }      
     }
-    localStorage.setItem('user', JSON.stringify(users)); 
   }
+
+  if (isValidationPassed){
+    users.push(user);
+    localStorage.setItem('user', JSON.stringify(users));
+  } 
 });
 
 
