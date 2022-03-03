@@ -77,12 +77,13 @@ function createElement(title, description){
 
 //блок-форма
 
-function Input(type, value, placeholder, classList, id) {
+function Input(type, value, placeholder, classList, id, required) {
   this.type = type;
   this.value = value;
   this.placeholder = placeholder;
   this.classList = classList;
   this.id = id;
+  this.required = required;
 };
 
 Input.prototype.create = function () {
@@ -92,16 +93,17 @@ Input.prototype.create = function () {
   input.placeholder = this.placeholder;
   input.classList = this.classList;
   input.id = this.id;
+  input.required = this.required;
   contactBlockForm.appendChild(input);
 };
 
-const input1 = new Input("text",  "", "Your NAME", "contact-block__form-user", "name");
+const input1 = new Input("text",  "", "Your NAME", "contact-block__form-user", "name", "required");
 input1.create();
 
-const input2 = new Input("email", "", "Your Email", "contact-block__form-user", "mail");
+const input2 = new Input("email", "", "Your Email", "contact-block__form-user", "mail", "required");
 input2.create();
 
-const textarea = new Input("text", "", "Write message", "contact-block__questions-user", "message");
+const textarea = new Input("text", "", "Write message", "contact-block__questions-user", "message", "required");
 textarea.create();
 
 //валидация
@@ -112,38 +114,29 @@ contactBlockButton.addEventListener('click', function (event) {
   event.preventDefault();
 
   let user;
-  let isValidationPassed;
 
   let elems = contactBlockForm.children;
   for (let contactBlockForm of elems){
     if(contactBlockForm.className !== 'contact-block__send'){
 
-      if(contactBlockForm.value === ''){
-        contactBlockForm.style.border = '1px solid red'
-        isValidationPassed = false;
+      if(contactBlockForm.value == ''){
+        elems.required = false;
+        return false;
       }
-      
-      else{
-        contactBlockForm.style.border = 'none';
-        isValidationPassed = true;
 
-        let names = document.body.querySelector("#name").value;
-        let mail = document.body.querySelector('#mail').value;
-        let message = document.body.querySelector('#message').value;
-        
-        user = {
-          names,
-          mail,
-          message
-        };
-      }      
-    }
+      let names = document.body.querySelector("#name").value;
+      let mail = document.body.querySelector('#mail').value;
+      let message = document.body.querySelector('#message').value;
+
+      user = {
+        names,
+        mail,
+        message
+      }; 
+    } 
   }
-
-  if (isValidationPassed){
-    users.push(user);
-    localStorage.setItem('user', JSON.stringify(users));
-  } 
+  users.push(user);
+  localStorage.setItem('user', JSON.stringify(users));
 });
 
 
