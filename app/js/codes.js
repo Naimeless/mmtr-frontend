@@ -114,6 +114,7 @@ contactBlockButton.addEventListener('click', function (event) {
   event.preventDefault();
 
   let user;
+  let isValidationPassed = true;
 
   let elems = contactBlockForm.children;
   for (let elem of elems){
@@ -121,18 +122,20 @@ contactBlockButton.addEventListener('click', function (event) {
 
       if(elem.value === ''){
         elem.style.border = '1px solid red';
-        return false;
+        isValidationPassed = false;
       }
 
       let names = document.body.querySelector("#name").value;
       let mail = document.body.querySelector('#mail').value;
       let message = document.body.querySelector('#message').value;
 
-      user = {
-        names,
-        mail,
-        message
-      }; 
+      if (isValidationPassed){
+        user = {
+          names,
+          mail,
+          message
+        }; 
+      }
     } 
   }
   users.push(user);
