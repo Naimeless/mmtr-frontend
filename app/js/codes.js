@@ -116,10 +116,10 @@ contactBlockButton.addEventListener('click', function (event) {
   let user;
 
   let elems = contactBlockForm.children;
-  for (let contactBlockForm of elems){
-    if(contactBlockForm.className !== 'contact-block__send'){
+  for (let Elem of elems){
+    if(Elem.className !== 'contact-block__send'){
 
-      if(contactBlockForm.value == ''){
+      if(Elem.value == ''){
         elems.required = false;
         return false;
       }
