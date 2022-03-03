@@ -119,7 +119,7 @@ contactBlockButton.addEventListener('click', function (event) {
   for (let elem of elems){
     if(elem.className !== 'contact-block__send'){
 
-      if(elem.value == ''){
+      if(elem.value === ''){
         elem.style.border = '1px solid red';
         return false;
       }
