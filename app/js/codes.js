@@ -83,7 +83,7 @@ function Input(type, value, placeholder, classList, id, required) {
   this.placeholder = placeholder;
   this.classList = classList;
   this.id = id;
-  this.required = required;
+  // this.required = required;
 };
 
 Input.prototype.create = function () {
@@ -116,11 +116,11 @@ contactBlockButton.addEventListener('click', function (event) {
   let user;
 
   let elems = contactBlockForm.children;
-  for (let Elem of elems){
-    if(Elem.className !== 'contact-block__send'){
+  for (let elem of elems){
+    if(elem.className !== 'contact-block__send'){
 
-      if(Elem.value == ''){
-        elems.required = false;
+      if(elem.value == ''){
+        elem.style.border = '1px solid red';
         return false;
       }
 
