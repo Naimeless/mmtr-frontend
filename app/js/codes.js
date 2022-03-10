@@ -7,9 +7,7 @@ contactFormLink.onclick = function link() {
     document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'});
   }
 
-
-
-/*блок сервисы*/
+const users = JSON.parse(localStorage.getItem('user')) || [];
 
 const servicesBlockContent = document.getElementById("services-block-content");
 
@@ -77,13 +75,12 @@ function createElement(title, description){
 
 //блок-форма
 
-function Input(type, value, placeholder, classList, id, required) {
+function Input(type, value, placeholder, classList, id) {
   this.type = type;
   this.value = value;
   this.placeholder = placeholder;
   this.classList = classList;
   this.id = id;
-  // this.required = required;
 };
 
 Input.prototype.create = function () {
@@ -93,22 +90,38 @@ Input.prototype.create = function () {
   input.placeholder = this.placeholder;
   input.classList = this.classList;
   input.id = this.id;
-  input.required = this.required;
   contactBlockForm.appendChild(input);
 };
 
-const input1 = new Input("text",  "", "Your NAME", "contact-block__form-user", "name", "required");
+function textarea(type, value, placeholder, classList, id) {
+  this.type = type;
+  this.value = value;
+  this.placeholder = placeholder;
+  this.classList = classList;
+  this.id = id;
+};
+
+textarea.prototype.create = function () {
+  const textarea = document.createElement("textarea");
+  textarea.type = this.type;
+  textarea.value = this.value;
+  textarea.placeholder = this.placeholder;
+  textarea.classList = this.classList;
+  textarea.id = this.id;
+  contactBlockForm.appendChild(textarea);
+};
+
+const input1 = new Input("text",  "", "Your NAME", "contact-block__form-user", "name");
 input1.create();
 
-const input2 = new Input("email", "", "Your Email", "contact-block__form-user", "mail", "required");
+const input2 = new Input("email", "", "Your Email", "contact-block__form-user", "mail");
 input2.create();
 
-const textarea = new Input("text", "", "Write message", "contact-block__questions-user", "message", "required");
-textarea.create();
+const input3 = new textarea("text", "", "Write message", "contact-block__questions-user", "message");
+input3.create();
 
 //валидация
 
-const users = [];
 
 contactBlockButton.addEventListener('click', function (event) {
   event.preventDefault();
@@ -124,23 +137,30 @@ contactBlockButton.addEventListener('click', function (event) {
         elem.style.border = '1px solid red';
         isValidationPassed = false;
       }
-
-      let names = document.body.querySelector("#name").value;
-      let mail = document.body.querySelector('#mail').value;
-      let message = document.body.querySelector('#message').value;
-
-      if (isValidationPassed){
-        user = {
-          names,
-          mail,
-          message
-        }; 
-      }
     } 
   }
-  users.push(user);
-  localStorage.setItem('user', JSON.stringify(users));
+  let names = document.body.querySelector("#name").value;
+  let mail = document.body.querySelector('#mail').value;
+  let message = document.body.querySelector('#message').value;
+
+  if (isValidationPassed){
+    user = {
+      names,
+      mail,
+      message
+    }; 
+    users.push(user);
+    localStorage.setItem('user', JSON.stringify(users));
+    contactBlockForm.reset();
+  }
 });
+
+
+
+
+
+// localStorage.setItem('user1', JSON.stringify(users));
+
 
 
 
